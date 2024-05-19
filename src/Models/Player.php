@@ -38,11 +38,4 @@ class Player
 
         return $this;
     }
-
-    public function decreasePoint(int $point): self
-    {
-        $this->points -= $point;
-
-        return $this;
-    }
 }

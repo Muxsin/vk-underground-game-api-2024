@@ -79,7 +79,7 @@ class Map
         $this->setRooms($rooms);
     }
 
-    public function findMinPath()
+    public function findMinPath(): array
     {
         $starting_room = $this->getStartingRoom();
         $to_visit = [$starting_room];
