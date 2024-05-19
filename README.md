@@ -1,21 +1,21 @@
 # VK Underground Game API 2024
 
-## Requirement
+## Требование
 
 - PHP 8.2
 - Composer
 
-## Installation
+## Установка
 
-1. Run `composer install`
+1. Запустите `composer install`
 
 ## Running
 
-1. Run `php -S localhost:8080 -t ./public`
-1. Open collection from repository in postman to see examples and test API.
-1. Enjoy!
+1. Запустите `php -S localhost:8080 -t ./public`
+1. Откройте коллекцию из репозитория в Postman, чтобы просмотреть примеры и протестировать API.
+1. Наслаждаться!
 
-## Endpoints
+## Конечные точки
 
 - `POST /api/game/start`
     - **Body**:
@@ -32,17 +32,17 @@
                 - `items`:
                   - `type`: integer
               - `visited`: boolean
-    - **Description**: Endpoint for initializing the game.
+    - **Описание**: Конечная точка для инициализации игры.
 - `POST /api/game/move`
     - **Body**:
         - `room_number`: integer
-    - **Description**: Endpoint for moving the player.
+    - **Описание**: Конечная точка перемещения игрока.
 - `game /api/game/min-path`
-    - **Description**: Endpoint to find min path.
+    - **Описание**: Конечная точка для поиска минимального пути.
 
-### Example
+### Пример
 
-#### Initializing the game:
+#### Инициализация игры:
 ```json
 {
     "enter_room": 1,
@@ -108,7 +108,7 @@
 
 ![img.png](img.png)
 
-#### Moving the player:
+#### Перемещение игрока:
 
 ```json
 {
