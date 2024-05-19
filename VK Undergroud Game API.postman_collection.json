@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "5d142a0d-9039-4f69-a94d-8fef4761a75e",
+		"name": "VK Undergroud Game API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12593810"
+	},
+	"item": [
+		{
+			"name": "Create a new game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"enter_room\": 1,\r\n    \"exit_room\": 9,\r\n    \"rooms\": [\r\n        {\r\n      \"room_number\": 1,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [4],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 2,\r\n      \"type\": \"monster\",\r\n      \"connected_rooms\": [3, 5],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 3,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [2, 6],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 4,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [1, 5, 7],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 5,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [2, 4],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 6,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [3, 9],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 7,\r\n      \"type\": \"moster\",\r\n      \"connected_rooms\": [4, 8],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 8,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [7, 9],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 9,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [6, 8],\r\n      \"visited\": false\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/game/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Min Path",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"enter_room\": 1,\r\n    \"exit_room\": 9,\r\n    \"rooms\": [\r\n        {\r\n      \"room_number\": 1,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [4],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 2,\r\n      \"type\": \"monster\",\r\n      \"connected_rooms\": [3, 5],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 3,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [2, 6],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 4,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [1, 5, 7],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 5,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [2, 4],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 6,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [3, 9],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 7,\r\n      \"type\": \"moster\",\r\n      \"connected_rooms\": [4, 8],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 8,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [7, 9],\r\n      \"visited\": false\r\n    },\r\n    {\r\n      \"room_number\": 9,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [6, 8],\r\n      \"visited\": false\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/game/min-path",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"min-path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"enter_room\": 1,\r\n    \"exit_room\": 9,\r\n    \"rooms\": [\r\n        {\r\n      \"room_number\": 1,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [4]\r\n    },\r\n    {\r\n      \"room_number\": 2,\r\n      \"type\": \"monster\",\r\n      \"connected_rooms\": [3, 5]\r\n    },\r\n    {\r\n      \"room_number\": 3,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [2, 6]\r\n    },\r\n    {\r\n      \"room_number\": 4,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [1, 5, 7]\r\n    },\r\n    {\r\n      \"room_number\": 5,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [2, 4]\r\n    },\r\n    {\r\n      \"room_number\": 6,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [3, 9]\r\n    },\r\n    {\r\n      \"room_number\": 7,\r\n      \"type\": \"moster\",\r\n      \"connected_rooms\": [4, 8]\r\n    },\r\n    {\r\n      \"room_number\": 8,\r\n      \"type\": \"chest\",\r\n      \"connected_rooms\": [7, 9]\r\n    },\r\n    {\r\n      \"room_number\": 9,\r\n      \"type\": \"empty\",\r\n      \"connected_rooms\": [6, 8]\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/game/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"start"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
